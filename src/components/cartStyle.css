@@ -38,4 +38,12 @@
 .fa-solid{
     color: rgb(184, 53, 53);
 }
+.delete-button {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  color: #d9344a;
+  cursor: pointer;
+}
+
 
