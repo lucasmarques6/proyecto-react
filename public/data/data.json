@@ -1,0 +1,79 @@
+[
+  {
+    "nombre": "Rustic Plastic Table",
+    "precio": "417.39",
+    "stock": 17,
+    "image": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/98.jpg",
+    "id": "1"
+  },
+  {
+    "nombre": "Sleek Aluminum Chips",
+    "precio": "640.05",
+    "stock": 30,
+    "image": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/55.jpg",
+    "id": "2"
+  },
+  {
+    "nombre": "Incredible Cotton Bacon",
+    "precio": "820.24",
+    "stock": 48,
+    "image": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/57.jpg",
+    "id": "3"
+  },
+  {
+    "nombre": "Awesome Rubber Shoes",
+    "precio": "559.59",
+    "stock": 2,
+    "image": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/92.jpg",
+    "id": "4"
+  },
+  {
+    "nombre": "Tasty Granite Shoes",
+    "precio": "187.41",
+    "stock": 33,
+    "image": "https://avatars.githubusercontent.com/u/76919918",
+    "id": "5"
+  },
+  {
+    "nombre": "Elegant Marble Fish",
+    "precio": "831.79",
+    "stock": 39,
+    "image": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/27.jpg",
+    "id": "6"
+  },
+  {
+    "nombre": "Sleek Cotton Hat",
+    "precio": "980.25",
+    "stock": 17,
+    "image": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/77.jpg",
+    "id": "7"
+  },
+  {
+    "nombre": "Tasty Aluminum Ball",
+    "precio": "23.55",
+    "stock": 13,
+    "image": "https://avatars.githubusercontent.com/u/66318953",
+    "id": "8"
+  },
+  {
+    "nombre": "Oriental Gold Mouse",
+    "precio": "259.29",
+    "stock": 53,
+    "image": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg",
+    "id": "9"
+  },
+  {
+    "nombre": "Handcrafted Cotton Chips",
+    "precio": "540.49",
+    "stock": 46,
+    "image": "https://avatars.githubusercontent.com/u/31170329",
+    "id": "10"
+  },
+  {
+    "nombre": "Oriental Gold Mouse",
+    "precio": "259.29",
+    "stock": 53,
+    "image": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg",
+    "id": "9"
+  }
+]

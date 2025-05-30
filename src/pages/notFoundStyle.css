@@ -1,0 +1,30 @@
+/* NotFound.css */
+.not-found-container {
+  color: #333;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.not-found-container img {
+  width: 25%;
+  margin: 20px 0;
+}
+
+.not-found-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.not-found-container button:hover {
+  background-color: #555;
+}
