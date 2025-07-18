@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import FormularioProducto from "../components/FormularioProducto";
 import FormularioEdicion from "../components/FormularioEdicion";
+import SEO from "../components/SEO";
 import { CartContext } from "../context/CartContext";
 import { AdminContext } from "../context/AdminContext";
 import { useNavigate } from "react-router-dom";
@@ -26,7 +27,13 @@ const Admin = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="container">
+        <>
+            <SEO 
+                title="Panel de Administración - Gestión de Productos"
+                description="Panel administrativo para gestionar productos, inventario y configuraciones del sistema."
+                keywords="admin, administración, gestión, productos, panel, dashboard"
+            />
+            <div className="container">
             {loading ? (
                 <p>Cargando...</p>
             ) : (
@@ -75,7 +82,8 @@ const Admin = () => {
             <button onClick={() => setOpen(true)}>Agregar producto nuevo</button>
             {open && (<FormularioProducto onAgregar={agregarProducto} />)}
             {openEditor && (<FormularioEdicion productoSeleccionado={seleccionado} onActualizar={actulizarProducto} />)}
-        </div>
+            </div>
+        </>
     );
 };
 

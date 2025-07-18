@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Header from './estaticos/Header'
 import Footer from './estaticos/Footer'
+import SEO from './SEO'
 import { CartContext } from '../context/CartContext'
 
 
@@ -14,15 +15,28 @@ const DetallesProductos = () => {
 
   if (!product) {
     return (
-      <div style={{ padding: '2rem', textAlign: 'center' }}>
-        <h1 style={{ color: '#c00' }}>Detalle del producto: {id}</h1>
-        <p style={{ fontSize: '1.2rem' }}>Producto no encontrado</p>
-      </div>
+      <>
+        <SEO 
+          title="Producto no encontrado"
+          description="El producto que buscas no está disponible en este momento."
+        />
+        <div style={{ padding: '2rem', textAlign: 'center' }}>
+          <h1 style={{ color: '#c00' }}>Detalle del producto: {id}</h1>
+          <p style={{ fontSize: '1.2rem' }}>Producto no encontrado</p>
+        </div>
+      </>
     );
   }
 
   return (
     <>
+      <SEO 
+        title={`${product.nombre} - Detalles del Producto`}
+        description={`${product.nombre} por solo $${product.precio}. Stock disponible: ${product.stock} unidades. Compra ahora con envío rápido.`}
+        keywords={`${product.nombre}, ${product.categoria}, producto, comprar, precio, stock`}
+        image={product.image}
+        type="product"
+      />
       <Header />
       <section
         style={{

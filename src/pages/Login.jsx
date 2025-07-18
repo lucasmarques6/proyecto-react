@@ -1,23 +1,33 @@
 import React from 'react';
-import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
+import SEO from '../components/SEO';
 
 const Login = () => {
 
   const {email, setEmail,password, setPassword, handleSubmit,errors} = useAuth()
   
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '1rem',
-        maxWidth: '400px',
-        margin: 'auto',
-      }}
-    >
+    <>
+      <SEO 
+        title="Iniciar Sesión - Accede a tu Cuenta"
+        description="Inicia sesión en tu cuenta para acceder a funciones exclusivas y gestionar tus productos favoritos."
+        keywords="login, iniciar sesión, cuenta, acceso, usuario, contraseña"
+      />
+      <div className="container mt-5 mb-5">
+        <div className="row justify-content-center">
+          <div className="col-md-6 col-lg-4">
+            <h2 className="text-center mb-4">Iniciar Sesión</h2>
+            <form
+              onSubmit={handleSubmit}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem',
+                maxWidth: '400px',
+                margin: 'auto',
+              }}
+            >
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <label htmlFor="formBasicEmail" style={{ marginBottom: '0.5rem', fontWeight: 'bold' }}>
           Email address
@@ -78,7 +88,11 @@ const Login = () => {
       >
         Submit
       </button>
-    </form>
+            </form>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
