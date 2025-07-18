@@ -1,7 +1,8 @@
 nav{
-    background-color: #333;
+    background: linear-gradient(135deg, var(--azul-violeta), var(--azul-lavanda));
     color: white;
     padding: 10px;
+    box-shadow: 0 2px 10px rgba(118, 148, 201, 0.3);
 }
 ul{
     list-style: none;
@@ -14,21 +15,153 @@ ul{
 .link{
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--verde-menta);
+}
+
+.link.active {
+    color: var(--verde-menta);
+    font-weight: bold;
 }
 
 footer{
-    background-color: #f1f1f1;
-    padding: 10px;
+    background-color: var(--blanco-gris);
+    padding: 20px;
     text-align: center;
     margin-top: 20px;
-    color: #333;
+    color: var(--color-texto);
+    border-top: 2px solid var(--beige-claro);
 }
 
 .btnCart{
     background-color: transparent;
     border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnCart:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* Botón Admin */
+.btnAdmin {
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btnAdmin:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* Botón Login */
+.btnLogin {
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btnLogin:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
 }
 
 .fa-cart-shopping{
-    color: red;
+    color: var(--rosa-pastel);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.fa-cart-shopping:hover {
+    color: var(--azul-violeta);
+}
+
+/* Admin */
+.fa-user-tie {
+    color: var(--azul-violeta);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.fa-user-tie:hover {
+    color: var(--verde-menta);
+}
+
+/* Login (entrada) */
+.fa-right-to-bracket {
+    color: var(--verde-menta);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.fa-right-to-bracket:hover {
+    color: var(--azul-lavanda);
+}
+
+/* Salir (logout) */
+.fa-right-from-bracket {
+    color: var(--rosa-pastel);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.fa-right-from-bracket:hover {
+    color: #e91e63;
+}
+
+.navButton {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* Estilos específicos para el admin */
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+}
+
+.navItem a {
+    color: var(--azul-violeta);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navItem a:hover {
+    color: var(--verde-menta);
 }

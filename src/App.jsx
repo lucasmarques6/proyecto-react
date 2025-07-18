@@ -1,6 +1,7 @@
-import { useContext } from "react";
+
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 import Home from "./pages/Home";
 import AcercaDe from "./pages/AcercaDe";
 import Contactos from "./pages/Contactos";
@@ -11,63 +12,45 @@ import DetallesProductos from "./components/DetallesProductos";
 import Login from "./pages/Login";
 import RutaProtegida from "./auth/RutasProtegidas";
 import { CartContext } from "./context/CartContext";
+import { useContext } from "react";
 
 function App() {
-  const {
-    cart,
-    productos,
-    cargando,
-    error,
-    handleAddToCart,
-    handleDeleteFromCart,
-    isAuthenticated,
-  } = useContext(CartContext);
+
+  const { isAuthenticated } = useContext(CartContext);
 
   return (
-    <Router>
+    <>
       <Routes>
         <Route
           path="/"
           element={
-            <Home
-              borrarProducto={handleDeleteFromCart}
-              agregarCarrito={handleAddToCart}
-              cart={cart}
-              productos={productos}
-              cargando={cargando}
-            />
+            <Home />
           }
         />
 
         <Route
           path="/acercade"
           element={
-            <AcercaDe borrarProducto={handleDeleteFromCart} cart={cart} />
+            <AcercaDe />
           }
         />
 
         <Route
           path="/productos"
           element={
-            <GaleriaDeProductos
-              borrarProducto={handleDeleteFromCart}
-              agregarCarrito={handleAddToCart}
-              cart={cart}
-              productos={productos}
-              cargando={cargando}
-            />
+            <GaleriaDeProductos/>
           }
         />
 
         <Route
           path="/productos/:id"
-          element={<DetallesProductos productos={productos} />}
+          element={<DetallesProductos />}
         />
 
         <Route
           path="/contacto"
           element={
-            <Contactos borrarProducto={handleDeleteFromCart} cart={cart} />
+            <Contactos/>
           }
         />
 
@@ -85,7 +68,20 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </Router>
+      
+      <ToastContainer 
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+    </>
   );
 }
 

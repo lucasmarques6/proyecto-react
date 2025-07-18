@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 import './cartStyle.css';
 
-const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
+const Cart = ({ isOpen, onClose }) => {
   // Calcular total general
-  const totalGeneral = cartItems.reduce(
+  const { cart, handleDeleteFromCart } = useContext(CartContext);
+
+
+  const totalGeneral = cart.reduce(
     (acc, item) => acc + item.precio * item.quantity,
     0
   );
@@ -18,17 +22,17 @@ const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
       </div>
 
       <div className='cart-content'>
-        {cartItems.length === 0 ? (
+        {cart.length === 0 ? (
           <p style={{ color: '#d9344adb' }}>El carrito está vacío</p>
         ) : (
           <ul className='cart-item'>
-            {cartItems.map((item) => (
+            {cart.map((item) => (
               <li key={item.id} style={{ color: 'black', marginBottom: '1rem' }}>
                 <strong>{item.nombre}</strong><br />
                 Precio: ${item.precio}<br />
                 Cantidad: {item.quantity}<br />
                 Total: ${item.precio * item.quantity}
-                <button onClick={() => borrarProducto(item)} className='delete-button'>
+                <button onClick={() => handleDeleteFromCart (item)} className='delete-button'>
                   <i className='fa-solid fa-trash'></i>
                 </button>
               </li>
@@ -37,7 +41,7 @@ const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
         )}
       </div>
 
-      {cartItems.length > 0 && (
+      {cart.length > 0 && (
         <div className='cart-total' style={{ color: 'black', padding: '1rem' }}>
           <hr />
           <h3>Total general: ${totalGeneral}</h3>

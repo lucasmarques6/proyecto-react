@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Header from '../components/estaticos/Header'
 import Footer from '../components/estaticos/Footer'
 import ProductList from '../components/ProductList'
 import Loading from './Loading'
+import { CartContext }  from '../context/CartContext'
 
+const Home = () => {
 
-const Home = ({ cart ,productos, cargando, agregarCarrito, borrarProducto }) => {
+  const { cargando } = useContext(CartContext)
   return (
     <>
-      <Header borrarProducto={borrarProducto} cartItems={cart}/>
+      <Header/>
       <main>
         <h1>Bienvenidos a mi Tienda</h1>
 
@@ -17,14 +19,10 @@ const Home = ({ cart ,productos, cargando, agregarCarrito, borrarProducto }) => 
           cargando ? (
             <Loading />
           ) : (
-            <ProductList agregarCarrito={agregarCarrito} productos={productos} />
+            <ProductList/>
           )
         }
-
-
       </main>
-
-
 
       <Footer />
     </>

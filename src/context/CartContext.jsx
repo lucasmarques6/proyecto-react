@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 export const CartContext = createContext();
 
@@ -8,9 +9,12 @@ export const CartProvider = ({ children }) => {
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(false);
   const [isAuthenticated, setIsAuth] = useState(false);
+  const [busqueda, setBusqueda] = useState("");
 
   useEffect(() => {
-    fetch("https://681e2a9cc1c291fa663341e3.mockapi.io/productos-ecommerce/productos")
+    fetch(
+      "https://681e2a9cc1c291fa663341e3.mockapi.io/productos-ecommerce/productos"
+    )
       .then((respuesta) => respuesta.json())
       .then((datos) => {
         setTimeout(() => {
@@ -24,6 +28,10 @@ export const CartProvider = ({ children }) => {
         setError(true);
       });
   }, []);
+
+  const productosFiltrados = productos.filter((producto) =>
+    producto?.nombre.toLowerCase().includes(busqueda.toLowerCase())
+  );
 
   const handleAddToCart = (product) => {
     const productInCart = cart.find((item) => item.id === product.id);
@@ -68,6 +76,7 @@ export const CartProvider = ({ children }) => {
         handleAddToCart,
         handleDeleteFromCart,
         isAuthenticated,
+        setIsAuth, productosFiltrados, busqueda, setBusqueda
       }}
     >
       {children}

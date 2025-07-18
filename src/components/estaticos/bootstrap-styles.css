@@ -1,0 +1,128 @@
+/* Bootstrap Navbar personalizado */
+.custom-navbar {
+    background: linear-gradient(135deg, var(--azul-violeta), var(--azul-lavanda)) !important;
+    box-shadow: 0 2px 10px rgba(118, 148, 201, 0.3);
+    padding: 1rem 0;
+}
+
+.custom-navbar .navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.custom-navbar .navbar-brand:hover {
+    color: var(--verde-menta) !important;
+}
+
+/* Botón hamburguesa personalizado */
+.custom-toggler {
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+.custom-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Links de navegación */
+.custom-link {
+    color: white !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px 12px !important;
+    border-radius: 6px;
+    margin: 0 4px;
+}
+
+.custom-link:hover {
+    color: var(--verde-menta) !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.custom-link.active {
+    color: var(--verde-menta) !important;
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: bold;
+}
+
+/* Botones de iconos */
+.btnCart, .btnLogin, .btnAdmin {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 4px;
+}
+
+.btnCart:hover, .btnLogin:hover, .btnAdmin:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    transform: scale(1.1);
+}
+
+.fa-cart-shopping {
+    color: var(--rosa-pastel);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.fa-cart-shopping:hover {
+    color: var(--azul-violeta);
+}
+
+.fa-user-tie {
+    color: var(--azul-violeta);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.fa-user-tie:hover {
+    color: var(--verde-menta);
+}
+
+.fa-right-to-bracket {
+    color: var(--verde-menta);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.fa-right-to-bracket:hover {
+    color: var(--azul-lavanda);
+}
+
+/* Footer */
+footer {
+    background-color: var(--blanco-gris);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--color-texto);
+    border-top: 2px solid var(--beige-claro);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .custom-navbar .navbar-nav {
+        text-align: center;
+        padding: 1rem 0;
+        background: linear-gradient(135deg, var(--azul-violeta), var(--azul-lavanda));
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+    
+    .custom-navbar .nav-item {
+        margin: 0.5rem 0;
+    }
+    
+    .btnCart, .btnLogin, .btnAdmin {
+        display: inline-block;
+        margin: 0.5rem;
+    }
+}

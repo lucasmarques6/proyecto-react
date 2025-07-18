@@ -3,10 +3,10 @@ import Header from "../components/estaticos/Header";
 import Footer from "../components/estaticos/Footer";
 import loading from "../assets/loading.gif";
 
-const AcercaDe = ({ cart, borrarProducto }) => {
+const AcercaDe = () => {
   return (
     <>
-      <Header borrarProducto={borrarProducto} cartItems={cart} />
+      <Header />
       <h1>Nuestro trabajo</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure

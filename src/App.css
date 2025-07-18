@@ -1,6 +1,9 @@
 .container {
     padding: 20px;
     font-family: Arial, sans-serif;
+    background-color: var(--blanco-gris);
+    border-radius: 12px;
+    border: 1px solid var(--beige-claro);
 }
 
 .title {
@@ -23,10 +26,17 @@
 .button {
     padding: 10px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, var(--azul-violeta), var(--azul-lavanda));
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, var(--verde-menta), var(--rosa-pastel));
+    transform: translateY(-2px);
 }
 
 .list {
@@ -59,16 +69,31 @@
 .edit-button {
     margin-right: 10px;
     padding: 5px 10px;
-    background-color: #2196F3;
+    background-color: var(--azul-lavanda);
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: var(--azul-violeta);
 }
 
 .delete-button {
     padding: 5px 10px;
-    background-color: #f44336;
+    background-color: var(--rosa-pastel);
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #e91e63;
+}
+
+.link.active {
+    color: var(--verde-menta);
+    font-weight: bold;
 }
